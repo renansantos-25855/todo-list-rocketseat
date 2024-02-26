@@ -1,0 +1,79 @@
+
+.task{
+  min-height: 4.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  
+  
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 0.5rem;
+}
+
+.task input{
+  display: none;
+}
+
+.task label{
+  width: 1.09rem;
+  height: 1.09rem;
+  border: 2px solid var(--blue-500);
+  border-radius: 1rem;
+  margin-top: 0.2rem;
+
+  
+  cursor: pointer;
+}
+
+.task label:hover{
+  border-color: var(--blue-700);
+}
+
+.task input:checked + label{
+  border-color: var(--purple-700);
+  background-color: var(--purple-700);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: .1s ease-in-out background-color;
+  background-image: url("data:image/svg+xml,%3Csvg width='14'   height='14' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.43059 0.342154L4.09865 4.67409L1.61618 2.19162L0.780273 3.02753L4.09865 6.3459L9.26649 1.17806L8.43059 0.342154Z' fill='%23F2F2F2'/%3E%3C/svg%3E ");
+}
+
+.task input:checked + label:hover{
+  border-color: var(--purple-500);
+  background-color: var(--purple-500);
+}
+
+.task p {
+  font-size: 0.875rem;
+  color: var(--gray-100);
+}
+
+.task > input[type="checkbox"]:checked + label + p {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.task button {
+
+  width:  1.5rem;
+  height: 1.5rem;
+  box-sizing: content-box;
+  padding: 0.1875rem 0.15625rem;
+
+  background: transparent;
+  color: var(--gray-300);
+  line-height: 0;
+  border: none;
+  border-radius: 0.25rem;
+
+  cursor: pointer;
+}
+
+.task button:hover{
+  color: var(--danger);
+  background: var(--gray-400);
+}
